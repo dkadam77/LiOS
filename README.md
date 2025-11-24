@@ -18,6 +18,7 @@ For x86 software, FEX may be used. It is compatiable with Arch (which has a proj
 
 As Linux native games don't use DirectX (which is why WINE is sometimes used) they either use OpenGL or Vulkan. Vulkan already has **NATIVE** iOS support through Metal (MoltenVK) - we already know this works well, as MeloNX uses it for Switch emulation. OpenGL ES 2.0 and most of 3.0 has support for Metal through MetalANGLE... but this is used in older games, and Vulkan would be preferable. 
 
+For DirectX games DXVK with Wine could be used or Steam Proton.
 
 ## Basic Plan
 
