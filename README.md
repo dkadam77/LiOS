@@ -1,4 +1,4 @@
-# LiOS
+# LiOS (Linux for iOS)
 A possible way to execute Linux applications on iOS devices. 
 
 ## How?
@@ -19,4 +19,9 @@ For x86 software, FEX may be used. It is compatiable with Arch (which has a proj
 As Linux native games don't use DirectX (which is why WINE is sometimes used) they either use OpenGL or Vulkan. Vulkan already has **NATIVE** iOS support through Metal (MoltenVK) - we already know this works well, as MeloNX uses it for Switch emulation. OpenGL ES 2.0 and most of 3.0 has support for Metal through MetalANGLE... but this is used in older games, and Vulkan would be preferable. 
 
 
+## Basic Plan
 
+Hypervisor setup (similar to UTM-HV) that runs Ubuntu prefernable with LXQt (as its lightweight) (or even no dedicated DE). The easiest way to do this would probably be to use Lubuntu. 
+Automatically install Steam + FEX to this Ubuntu system.
+
+When a Vulkan game runs, use MoltenVK to render it , using hardware acceleration of an A/M series chip, similar to how MeloNX runs. An alternative to this would be to render it in the VM using unofficial Vulkan SDK for ARM Linux (though an offical SDK exists for Windows on ARM)
