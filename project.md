@@ -23,3 +23,13 @@ The second option is slightly more likely - the RAM entitlement can be given to 
 Also, on iOS 16 devices with Trollstore, Hyperv could work out of the box.
 
 However LiOS would not require HyperV, if the emulation is optimised enough.
+
+## Graphics 
+
+Using Venus, we can use Silk.NET which already uses MoltenVK and directly targets iOS. 
+
+
+Guest <--> VirtIO GPU Driver <--GUEST---QEMU----HOST---> Venus <--> Silk.NET / MoltenVK <---> Host
+
+Games could run in either OpenGL (Venus then MetalANGLE) or Vulkan (Venus then MoltenVK) and possibly DirectX (Silk.NET or DXVK on guest which then goes to Venus and MoltenVK).
+This maximises support with most games. 
